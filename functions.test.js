@@ -55,6 +55,22 @@ test("Calculator 3 - add neutral element", () => {
   expect(f.calculator.add(1, 0)).toBe(1);
 });
 
+test("Calculator 4 - subtract positives, minuend as the higher", () => {
+  expect(f.calculator.subtract(2, 1)).toBe(1);
+});
+
+test("Calculator 5 - subtract positives, minuend as the lower", () => {
+  expect(f.calculator.subtract(1, 2)).toBe(-1);
+});
+
+test("Calculator 6 - subtract negatives", () => {
+  expect(f.calculator.subtract(-2, -1)).toBe(-1);
+});
+
+test("Calculator 7 - subtract neutral element", () => {
+  expect(f.calculator.subtract(2, 0)).toBe(2);
+});
+
 // caesarCipher
 
 // analyzeArray
