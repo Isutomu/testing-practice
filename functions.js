@@ -7,3 +7,7 @@ export function capitalize(word) {
 export function reverse(word) {
   return !word.length ? "" : Array.from(word).reverse().join("");
 }
+
+export const calculator = {
+  add: (a, b) => a + b,
+};
