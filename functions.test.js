@@ -43,6 +43,17 @@ test("Reverse 5 - with numbers", () => {
 });
 
 // calculator
+test("Calculator 1 - add positives", () => {
+  expect(f.calculator.add(1, 2)).toBe(3);
+});
+
+test("Calculator 2 - add different signs", () => {
+  expect(f.calculator.add(1, -2)).toBe(-1);
+});
+
+test("Calculator 3 - add neutral element", () => {
+  expect(f.calculator.add(1, 0)).toBe(1);
+});
 
 // caesarCipher
 
