@@ -102,6 +102,23 @@ test("Calculator 14 - divide negative by 0", () => {
 test("Calculator 15 - divide 0 by 0", () => {
   expect(f.calculator.divide(0, 0)).toBe(NaN);
 });
+
+test("Calculator 16 - multiply positives", () => {
+  expect(f.calculator.multiply(10, 3)).toBe(30);
+});
+
+test("Calculator 17 - multiply with one being negative", () => {
+  expect(f.calculator.multiply(8, -3)).toBe(-24);
+});
+
+test("Calculator 18 - multiply negatives", () => {
+  expect(f.calculator.multiply(-7, -4)).toBe(28);
+});
+
+test("Calculator 19 - multiply element neutral", () => {
+  expect(f.calculator.multiply(10, 0)).toBe(0);
+});
+
 // caesarCipher
 
 // analyzeArray
