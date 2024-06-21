@@ -22,6 +22,25 @@ test("Capitalize 5 - first number", () => {
 });
 
 // reverseString
+test("Reverse 1 - normal", () => {
+  expect(f.reverse("equals")).toBe("slauqe");
+});
+
+test("Reverse 2 - palindrome", () => {
+  expect(f.reverse("lol")).toBe("lol");
+});
+
+test("Reverse 3 - containing caps", () => {
+  expect(f.reverse("LmAo")).toBe("oAmL");
+});
+
+test("Reverse 4 - nothing", () => {
+  expect(f.reverse("")).toBe("");
+});
+
+test("Reverse 5 - with numbers", () => {
+  expect(f.reverse("equ1als")).toBe("sla1uqe");
+});
 
 // calculator
 
