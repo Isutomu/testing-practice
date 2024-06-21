@@ -71,6 +71,37 @@ test("Calculator 7 - subtract neutral element", () => {
   expect(f.calculator.subtract(2, 0)).toBe(2);
 });
 
+test("Calculator 8 - divide positives", () => {
+  expect(f.calculator.subtract(4, 2)).toBe(2);
+});
+
+test("Calculator 9 - divide positives, resulting float", () => {
+  expect(f.calculator.subtract(3, 2)).toBeCloseTo(1.5);
+});
+
+test("Calculator 10 - divide negatives", () => {
+  expect(f.calculator.subtract(-6, -2)).toBe(3);
+});
+
+test("Calculator 11 - divide with one being negative", () => {
+  expect(f.calculator.subtract(2, -1)).toBe(-2);
+});
+
+test("Calculator 12 - divide 0", () => {
+  expect(f.calculator.subtract(0, 1)).toBe(0);
+});
+
+test("Calculator 13 - divide positive by 0", () => {
+  expect(f.calculator.subtract(1, 0)).toBe(Infinity);
+});
+
+test("Calculator 14 - divide negative by 0", () => {
+  expect(f.calculator.subtract(-1, 0)).toBe(-Infinity);
+});
+
+test("Calculator 15 - divide 0 by 0", () => {
+  expect(f.calculator.subtract(0, 0)).toBe(NaN);
+});
 // caesarCipher
 
 // analyzeArray
