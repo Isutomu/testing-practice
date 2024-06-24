@@ -137,3 +137,33 @@ test("Caesar cipher - letters and non letters", () => {
 });
 
 // analyzeArray
+test("Analyze array - one element", () => {
+  expect(f.analyzeArray([1])).toEqual({
+    average: 1,
+    min: 1,
+    max: 1,
+    length: 1,
+  });
+});
+
+test("Analyze array - three elements different values", () => {
+  expect(f.analyzeArray([2, 3, 1])).toEqual({
+    average: 2,
+    min: 1,
+    max: 3,
+    length: 3,
+  });
+});
+
+test("Analyze array - three equal elements", () => {
+  expect(f.analyzeArray([2, 2, 2])).toEqual({
+    average: 2,
+    min: 2,
+    max: 2,
+    length: 3,
+  });
+});
+
+test("Analyze array - empty array", () => {
+  expect(f.analyzeArray([])).toBeNull();
+});
