@@ -14,3 +14,42 @@ export const calculator = {
   divide: (a, b) => a / b,
   multiply: (a, b) => a * b,
 };
+
+function makeLettersArr() {
+  const letters = {
+    lower: [],
+    upper: [],
+  };
+
+  let letter = "a";
+  do {
+    letters.lower.push(letter);
+    letters.upper.push(letter.toUpperCase());
+
+    letter = String.fromCharCode(letter.charCodeAt() + 1);
+  } while (letter <= "z");
+
+  return letters;
+}
+
+export function caesarCipher(word, shift) {
+  const alphabet = makeLettersArr();
+
+  let newWord = "";
+  for (let i = 0; i < word.length; i++) {
+    let letter = word.charAt(i);
+    let newLetter;
+
+    if (alphabet.lower.includes(letter)) {
+      newLetter = alphabet.lower[(alphabet.lower.indexOf(letter) + shift) % 26];
+    } else if (alphabet.upper.includes(letter)) {
+      newLetter = alphabet.upper[(alphabet.upper.indexOf(letter) + shift) % 26];
+    } else {
+      newLetter = letter;
+    }
+
+    newWord += newLetter;
+  }
+
+  return newWord;
+}
