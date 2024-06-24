@@ -120,5 +120,20 @@ test("Calculator 19 - multiply element neutral", () => {
 });
 
 // caesarCipher
+test("Caesar cipher - only lowercase letters", () => {
+  expect(f.caesarCipher("xyz", 3)).toBe("abc");
+});
+
+test("Caesar cipher - only uppercase letters", () => {
+  expect(f.caesarCipher("xab", 4)).toBe("bef");
+});
+
+test("Caesar cipher - mixed case letters", () => {
+  expect(f.caesarCipher("YaBM", 5)).toBe("DfGR");
+});
+
+test("Caesar cipher - letters and non letters", () => {
+  expect(f.caesarCipher("Ya. B!M", 2)).toBe("Ac. D!O");
+});
 
 // analyzeArray
